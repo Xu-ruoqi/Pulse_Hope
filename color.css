@@ -1,0 +1,62 @@
+
+.standout
+{
+   margin-left: 700px;padding-top: 50px;
+}
+
+.w3-display-topright{right:0;top:0}
+
+.w3-bar-item{padding:8px 16px;float:left;width:auto;border:none;display:block;outline:0}
+
+.w3-padding-16{padding-top:16px!important;padding-bottom:16px!important}.w3-padding-24{padding-top:24px!important;padding-bottom:24px!important}
+
+.w3-jumbo{font-size:64px!important}
+
+.w3-xxxlarge
+{
+  color: #57310d;
+}
+
+.w3-button
+{
+  border:none;display:inline-block;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap
+}
+
+
+.w3-container-1{height:550px;padding-bottom: 90px;}
+
+.w3-container-2
+{
+  font-style: italic;
+}
+
+#modal01 p 
+{
+  text-align: left;
+  max-width: 600px;       
+  margin: 15px auto;      
+  line-height: 1.7;       
+  padding-left: 13%;      
+  box-sizing: border-box; 
+}
+
+/* 图片居中 */
+#modal01 .w3-image {
+  margin: 0 auto;
+  display: block;
+}
+
+
+@media (max-width: 600px) {
+  .w3-step {
+    padding-left: 40px;
+  }
+  .w3-step-number {
+    width: 30px !important;
+    height: 30px !important;
+    line-height: 30px !important;
+  }
+  .w3-xlarge {
+    font-size: 20px !important;
+  }
+}

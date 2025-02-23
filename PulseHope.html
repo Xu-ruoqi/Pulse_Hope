@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Pulse Hope - Pet Adoption Platform</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="color.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster&effect=shadow-multiple">
+
+<style>
+.w3-sidebar a {font-family: "Roboto", sans-serif}
+body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", "Poppins",sans-serif;}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:1;cursor:pointer}
+.w3-half img:hover{opacity:0.8}
+.w3-lobster {
+  font-family: "Lobster", Sans-serif;
+}
+</style>
+</head>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:285px;font-weight:bold;background-color: #426a45;" id="mySidebar">
+    <div class="w3-container w3-display-container w3-padding-32">
+      <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+      <h3 class="w3-padding-16 w3-lobster" style="color: #fecd3c; margin-left: 15px;font-size: 55px;"><b>Pulse<br>Hope</b></h3>
+    </div>
+    <div class="w3-bar-block w3-large w3-container" style="color: #fef6e4; font-weight: bold;">
+      <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white w3-round-large">Home</a> 
+
+      <div class="w3-dropdown-hover">
+        <button class="w3-button w3-hover-white w3-round-large">Pet Adoption <i class="fa fa-caret-down"></i></button>
+        <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-hover-white w3-round-large">
+         <a href="#showcase" class="w3-bar-item w3-button w3-round-large">Dogs > </a>
+         <a href="#showcase" class="w3-bar-item w3-button w3-round-large">Cats</a>
+         <a href="#showcase" class="w3-bar-item w3-button w3-round-large">Others</a>
+        </div>
+      </div>
+
+      <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white w3-round-large">Adoption Guidelines</a> 
+      <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white w3-round-large">About Us</a> 
+      <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white w3-round-large">Pet Sponsorship</a> 
+      <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white w3-round-large">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-orange w3-xlarge w3-padding">
+    <a href="javascript:void(0)" class="w3-button w3-orange w3-margin-right" onclick="w3_open()">☰</a>
+    <span>Pulse Hope</span>
+  </header>
+
+  <!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-container" style="background-color: #fef6e4;;margin-left:285px;"> 
+
+
+  <!-- Header -->
+  <div class="w3-display-container" style="margin-left: 11px; margin-right: 12px;">
+    <img src="img02/header10.png" style="height:108%;width:100%;">
+    <div class="w3-display-topleft w3-lobster w3-xxxlarge w3-col" style="margin-left:27px;color: #57310d; width:55%">
+      <p class="font-effect-shadow-multiple">Rescue And Adoption</p>
+      <h6 class="w3-text-black">Pulse Hope is a pet rescue and adoption platform with life care at its core. We believe that every life deserves to be treated gently. The platform name "Mai Wang" comes from the meaning of "extending the pulse of life, watching for the future", which means using "Pulse" to connect the emotional resonance between people and animals, lighting the light of hope in difficulties with "Hope", and building a warm bridge of life for stray animals and caring people.
+      </h6>
+    </div>
+  </div>
+  
+    <div class="w3-display-container" style="margin-left:15px;" id="showcase">
+       <div class="w3-container" style="margin-top:20px;" id="showcase"></div>
+       <h1 class="w3-xxxlarge"><b>Pet Adoption</b></h1>
+       <hr style="width:50px;border:5px solid#57310d" class="w3-round">
+       <h6 style="color: #555;margin-top: 30px;">Click on the image for details.</h6>
+    </div>
+
+  <!-- 待领养宠物（dog） -->
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <img src="img02/d01.jpg" class="w3-round-large" style="width:100%" 
+           onclick="onClick(this)" 
+           alt="Buddy (Male) Corgi"
+           data-dob="2020-01"
+           data-body="Medium"
+           data-character="Friendly"
+           data-sterilization="Yes"
+           data-vaccine="All vaccinated"
+           data-suitable="Families with children">
+    <img src="img02/p02.jpg" class="w3-round-large" style="width:100%" 
+           onclick="onClick(this)" 
+           alt="Bella (Female) Berner Sennenhund"
+           data-dob="1"
+           data-body="Large"
+           data-character="Calm"
+           data-sterilization="No"
+           data-vaccine="Rabies vaccine needed"
+           data-suitable="Experienced owners">
+      <img src="img02/p03.jpg" class="w3-round-large" style="width:100%" 
+           onclick="onClick(this)" 
+           alt="Charlie (Male) Flat-Coated Retriever"
+           data-dob="2021"
+           data-body="Large"
+           data-character="Gentle"
+           data-sterilization="Yes"
+           data-vaccine="All vaccinated"
+           data-suitable="Inexperienced are acceptable">
+    </div>
+
+    <div class="w3-half">
+      <img src="img02/p04.jpg" class="w3-round-large" style="width:100%" 
+           onclick="onClick(this)" 
+           alt="Daisy (Female) Pomeranian"
+           data-dob="2024"
+           data-body="Small"
+           data-character="Playful"
+           data-sterilization="No"
+           data-vaccine="All vaccine needed"
+           data-suitable="Experienced owners">
+      <img src="img02/p05.jpg" class="w3-round-large" style="width:100%" 
+           onclick="onClick(this)" 
+           alt="Luna (Female) Eskimo Dog"
+           data-dob="2022"
+           data-body="Large"
+           data-character="Playful"
+           data-sterilization="No"
+           data-vaccine="All vaccinated"
+           data-suitable="Inexperienced are acceptable">
+      <img src="img02/p06.jpg" class="w3-round-large" style="width:100%" 
+           onclick="onClick(this)" 
+           alt="Max (Male) French Bulldog"
+           data-dob="3.5"
+           data-body="Small"
+           data-character="Friendly"
+           data-sterilization="Yes"
+           data-vaccine="All vaccinated"
+           data-suitable="Inexperienced are acceptable">
+    </div>
+  </div>
+
+  <!-- 点开图片-->
+<div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+  <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+  <div class="w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption"></p>
+    <p id="modal-dob"></p>
+    <p id="modal-body"></p>
+    <p id="modal-character"></p>
+    <p id="modal-sterilization"></p>
+    <p id="modal-vaccine"></p>
+    <p id="modal-suitable"></p>
+  </div>
+</div>
+
+  <!-- Services -->
+  <div class="w3-container" id="services" style="margin-top:75px">
+    <h1 class="w3-xxxlarge"><b>Adoption Guidelines</b></h1>
+    <hr style="width:50px;border:5px solid #57310d" class="w3-round">
+    <p style="margin-top: 50px;"> * Adoption is pro bono, that is, no adoption fee will be charged. Adopters also do not have to pay for emergency medical expenses, food, transportation expenses and other expenses incurred after the pet is left behind by the original owner. Dear adopters can help with the daily expenses of the shelter through a single donation or monthly sponsorship plan. Thank you! </p>
+
+    <div class="w3-steps" style="margin-top: 50px;">
+      <!-- Step 1 -->
+      <div class="w3-step" style="margin-bottom:32px;padding-left:48px;position:relative;">
+        <div class="w3-step-number" style="position:absolute;left:0;top:0;width:36px;height:36px;background:#e26c52;color:white;border-radius:50%;text-align:center;line-height:36px;">1</div>
+        <h3 class="w3-xlarge" style="color:#69412a;margin-top:0;">Pick the right "kids" to be your partner</h3>
+        <p style="color:#666;line-height:1.6;margin-left:8px;">Keep an eye out for live updates on our instagram feed, or contact us to make an appointment to visit the animals in person at the shelter. We hope that you can visit and interact with the animals several times, and confirm your willingness before applying.
+          <br><span style="display:inline-block;background:#f9e9b8;color:#715503;padding:8px 16px;border-radius:4px;margin-top:8px;">
+            <i class="fa fa-phone" style="margin-right:8px;"></i>Reservation call: +852-4479633
+          </span>
+        </p>
+      </div>
+  
+      <!-- Step 2 -->
+      <div class="w3-step" style="margin-bottom:32px;padding-left:48px;position:relative;">
+        <div class="w3-step-number" style="position:absolute;left:0;top:0;width:36px;height:36px;background:#e26c52;color:white;border-radius:50%;text-align:center;line-height:36px;">2</div>
+        <h3 class="w3-xlarge" style="color:#69412a;margin-top:0;">Send an application</h3>
+        <p style="color:#666;line-height:1.6;margin-left:8px;">This platform does not support the application of others, interested adopters should apply in person, immediately fill in the "application form". Please prepare a video in advance of the applicant's visit. The video should briefly introduce the applicant's :</p>
+        <ul style="color:#666;margin-left:32px;list-style:none;padding-left:0;">
+          <li style="margin-bottom:8px;"><i class="fa fa-check-circle" style="color:#e26c52;margin-right:8px;"></i>Home environment and address</li>
+          <li style="margin-bottom:8px;"><i class="fa fa-check-circle" style="color:#e26c52;margin-right:8px;"></i>Indoor and balcony spaces</li>
+          <li><i class="fa fa-check-circle" style="color:#e26c52;margin-right:8px;"></i>Pet rest and toilet areas</li>
+        </ul>
+      </div>
+  
+      <!-- Step 3 -->
+      <div class="w3-step" style="margin-bottom:32px;padding-left:48px;position:relative;">
+        <div class="w3-step-number" style="position:absolute;left:0;top:0;width:36px;height:36px;background:#e26c52;color:white;border-radius:50%;text-align:center;line-height:36px;">3</div>
+        <h3 class="w3-xlarge" style="color:#69412a;margin-top:0;">Wait for the approval of the platform to become a "qualified applicant"</h3>
+        <p style="color:#666;line-height:1.6;margin-left:8px;">After the applicant submits the application form, the platform will conduct matching assessment, such as: the applicant's financial ability, the number of residents, the number of existing pets, the time they can spend with their pets, the breed and personality of the pets to be adopted.
+          The assessment will be completed within 10 working days after the application is submitted. The approved adopter will receive a call from our trainer or tutor to arrange a time to check the adoption with us.
+          <br>
+        </p>
+      </div>
+  
+      <!-- Step 4 -->
+      <div class="w3-step" style="margin-bottom:32px;padding-left:48px;position:relative;">
+        <div class="w3-step-number" style="position:absolute;left:0;top:0;width:36px;height:36px;background:#e26c52;color:white;border-radius:50%;text-align:center;line-height:36px;">4</div>
+        <h3 class="w3-xlarge" style="color:#69412a;margin-top:0;">Submit the documents required for adoption</h3>
+        <p style="color:#666;line-height:1.6;margin-left:8px;">If the applicant chooses to support a pet or make a donation, he/she must complete the sponsoring or donation procedure on the same day.</p>
+        <ul style="color:#666;margin-left:32px;list-style:none;padding-left:0;">
+          <li style="margin-bottom:8px;"><i class="fa fa-check-circle" style="color:#e26c52;margin-right:8px;"></i>Copy of the adopter's 「ID card」</li>
+          <li style="margin-bottom:8px;"><i class="fa fa-check-circle" style="color:#e26c52;margin-right:8px;"></i>The 「proof of residential address」 document in the adopter's name</li>
+        </ul>
+      </div>
+  
+      <!-- Step 5 -->
+      <div class="w3-step" style="margin-bottom:32px;padding-left:48px;position:relative;">
+        <div class="w3-step-number" style="position:absolute;left:0;top:0;width:36px;height:36px;background:#e26c52;color:white;border-radius:50%;text-align:center;line-height:36px;">5</div>
+        <h3 class="w3-xlarge" style="color:#69412a;margin-top:0;">Receive training and sign an agreement</h3>
+        <p style="color:#666;line-height:1.6;margin-left:8px;">The shelter instructor will instruct the owners about pet rearing information, such as diet size and cycle, the date of the next parasite prevention, the date of rabies injection, whether spaying or neutering is necessary, etc.<br>After the completion of the training, the formal handover is carried out, and the adopter signs the adoption agreement on the same day to complete the adoption.
+          <br>
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Designers -->
+  <div class="w3-container" id="designers" style="margin-top:75px">
+    <h1 class="w3-xxxlarge"><b>About Us</b></h1>
+    <hr style="width:50px;border:5px solid #57310d" class="w3-round">
+    <div class="w3-panel w3-leftbar w3-padding-24" style="border-left:4px solid #6b432c;background:white;margin:32px 0;">
+      <p> Pulse Hope is a non-profit pet rescue platform made up of volunteers, with a professional animal medical rescue team, pet trainers and pet health managers. </p>
+      <p>The purpose of the platform is to spread the right care for animals and ensure that all small animals that receive treatment and shelter from the platform are cared for until a suitable adoptive family is found.</p>
+    </div>
+    <p style="color: #666;">Our platform's services include :</p>
+  </div>
+
+  <!-- The Team -->
+  <div class="w3-row-padding">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-white w3-container-1">
+        <img src="img02/about 01.jpg" alt="John" style="width:100%">
+        <div class="w3-container">
+          <h3>Emergency Rescue:</h3>
+          <p class="w3-opacity">At any time</p>
+          <p>Rescue care for sick, injured and abused pets;<br>Pet medicine;<br>Emergency operation;<br>Reasonable placement;<br>Socialization training;<br>Adoption without compensation;<br>Foster care.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-white w3-container-1">
+        <img src="img02/about 02.jpg" alt="Jane" style="width:100%">
+        <div class="w3-container">
+          <h3>Free pet grooming:</h3>
+          <p class="w3-opacity">Reservation required</p>
+          <p>Enhance skills for unemployed people;<br>Provide extracurricular activities for students;<br>Provide pet grooming knowledge and practice.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-white w3-container-1">
+        <img src="img02/about 03.jpg" alt="Mike" style="width:100%">
+        <div class="w3-container">
+          <h3>Volunteer Activities:</h3>
+          <p class="w3-opacity">Twice a month</p>
+          <p>Co-organize animal volunteer activities with different youth groups;<br>Set up a volunteer award scheme to encourage young people to develop good moral character and love animals.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pricing Tables -->
+  <div class="w3-container" id="packages" style="margin-top:75px">
+    <h1 class="w3-xxxlarge"><b>Pet Sponsorship</b></h1>
+    <hr style="width:50px;border:5px solid #57310d" class="w3-round">
+    <p style="color: #555; margin-top:40px; margin-bottom: 40px;">The pet sponsorship program of our platform means that if you nominally claim a pet that belongs to you, but cannot take care of it in person due to work or family reasons, you can first foster your child in our shelter, issue support money on the platform regularly every month, we will take care of your pet for you, and regularly send you monthly expenses details.</p>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-half w3-margin-bottom">
+      <ul class="w3-ul w3-white w3-center">
+        <li class="w3-xlarge w3-padding-32" style="background-color: #b5dcb9;">Donate</li>
+        <li class="w3-padding-16">Provide toys</li>
+        <li class="w3-padding-16">Provide vaccine</li>
+        <li class="w3-padding-16">Donated milk powder</li>
+        <li class="w3-padding-16">Veterinary examination</li>
+        <li class="w3-padding-16">Salvage operations</li>
+        <li class="w3-padding-16">
+          <h2>$ Up to you</h2>
+          <span class="w3-opacity">Monthly/One-time</span>
+        </li>
+        <li class="w3-white w3-padding-24">
+          <button class="w3-button w3-padding-large w3-hover-black" style="background-color: #b5dcb9;">Sign Up</button>
+        </li>
+      </ul>
+    </div>
+        
+    <div class="w3-half">
+      <ul class="w3-ul w3-white w3-center">
+        <li class="w3-xlarge w3-padding-32" style="background-color: #fbd76c;">Sponsorship</li>
+        <li class="w3-padding-16">Monthly diet</li>
+        <li class="w3-padding-16">Regular beauty treatment</li>
+        <li class="w3-padding-16">Pet toy</li>
+        <li class="w3-padding-16">Timed deworming</li>
+        <li class="w3-padding-16">Pet vaccine</li>
+        <li class="w3-padding-16">
+          <h2>$ 300/500</h2>
+          <span class="w3-opacity">per month</span>
+        </li>
+        <li class="w3-white w3-padding-24">
+          <button class="w3-button w3-padding-large w3-hover-black" style="background-color: #fbd76c;">Sign Up</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Contact -->
+  <div class="w3-container" id="contact" style="margin-top:75px">
+    <h1 class="w3-xxxlarge"><b>Contact Us</b></h1>
+    <hr style="width:50px;border:5px solid #57310d" class="w3-round">
+    <p style="color: #555;margin-top: 25px;margin-bottom: 25px;">Do you have any questions or concerns? We welcome your letter or appointment at any time!</p>
+    <form action="/action_page.php" target="_blank">
+      <div class="w3-section">
+        <label>Name</label>
+        <input class="w3-input w3-border" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">
+        <label>Email</label>
+        <input class="w3-input w3-border" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">
+        <label>Message</label>
+        <input class="w3-input w3-border" type="text" name="Message" required>
+      </div>
+      <button type="submit" class="w3-button w3-block w3-padding-large w3-margin-bottom" style="background-color: #e26c52;">Send Message</button>
+    </form>  
+  </div>
+
+  <!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-container w3-padding-32" style="background-color: #fef6e4; padding-right:33px"><p class="w3-right">Powered by Pulse Hope © 2025</a></p></div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+function onClick(element) {
+  // 基础图片信息
+  document.getElementById("img01").src = element.src;
+  document.getElementById("caption").textContent = element.alt;
+  
+  // 动态数据注入
+  document.getElementById("modal-dob").textContent = `Date of birth/Age: ${element.dataset.dob}`;
+  document.getElementById("modal-body").textContent = `Body type: ${element.dataset.body}`;
+  document.getElementById("modal-character").textContent = `Character: ${element.dataset.character}`;
+  document.getElementById("modal-sterilization").textContent = `Sterilization: ${element.dataset.sterilization}`;
+  document.getElementById("modal-vaccine").textContent = `Vaccine: ${element.dataset.vaccine}`;
+  document.getElementById("modal-suitable").textContent = `Suitable for: ${element.dataset.suitable}`;
+
+  // 显示模态框
+  document.getElementById("modal01").style.display = "block";
+}
+
+
+</script>
+
+</body>
+</html>
